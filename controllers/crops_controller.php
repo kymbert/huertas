@@ -33,6 +33,6 @@
 			}
 			Crop::remove($_GET['id']);
 			$crops = Crop::all();
-			require_once '../views/crops/admin.php';
+			require_once 'views/crops/admin.php';
 		}
 	}
