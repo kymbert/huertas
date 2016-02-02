@@ -54,7 +54,7 @@ div.crop {
 }
 
 a.details-link {
-	color: #13b;
+	color: #b13;
 	text-decoration: none;
 	padding: 0.125em;
 	font-size: 0.75em;
@@ -77,4 +77,17 @@ a.admin-btn {
 	border: solid 1px;
 	border-radius: 10px;
 	background-color: #fff;
+}
+
+/* -------- MOBILE -------- */
+@media (max-device-width: 1000px) {
+	body {
+		font-size: 300%;
+	}
+	
+	div#nav a {
+		clear: both;
+		margin: 0.5em;
+	}
+
 }
