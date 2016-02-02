@@ -1,0 +1,80 @@
+/* ------ GLOBAL ----- */
+body {
+	font-family: Avenir, Helvetica, sans-serif;
+}
+
+div#content {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+/* ------ HEADER ----- */
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-weight: normal;
+}
+
+/* ------ NAV -------- */
+div#nav {
+	margin-bottom: 1em;
+}
+
+div#nav a {
+	color: #13b;
+	text-decoration: none;
+	margin-right: 1em;
+}
+
+/* ------ FOOTER ----- */
+footer {
+	margin-top: 2em;
+	font-size: 0.75em;
+	color: #666;
+	text-align: center;
+}
+
+/* ------ CROPS ------ */
+span.crop-common-name {
+	font-weight: bold;
+}
+
+span.crop-scientific-name {
+	font-style: italic;
+}
+
+div.crop-details {
+	margin-left: 2em;
+}
+
+div.crop {
+	margin: 1em;
+}
+
+a.details-link {
+	color: #13b;
+	text-decoration: none;
+	padding: 0.125em;
+	font-size: 0.75em;
+	border: solid 1px;
+}
+
+/* ------- ADMIN ----- */
+a.admin-btn {
+	color: #13b;
+	text-decoration: none;
+	padding: 1em;
+	border: solid 1px;
+	border-radius: 10px;
+}
+
+/* ------- NEW CROP FORM -- */
+#new-crop-submit {
+	color: #13b;
+	padding: 1em;
+	border: solid 1px;
+	border-radius: 10px;
+	background-color: #fff;
+}
