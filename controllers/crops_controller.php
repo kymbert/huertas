@@ -5,6 +5,11 @@
 			require_once 'views/crops/index.php';
 		}
 		
+		public function admin() {
+			$crops = Crop::all();
+			require_once 'views/crops/admin.php';
+		}
+		
 		public function detail() {
 			if (!isset($_GET['id'])) {
 				return call('pages', 'error');
@@ -20,5 +25,14 @@
 			$months = $_POST['months'];
 			$details = $_POST['details'];
 			Crop::add($common_name, $scientific_name, $harvest_time, $months, $details);
+		}
+		
+		public function remove() {
+			if (!isset($_GET['id'])) {
+				return call('pages', 'error');
+			}
+			Crop::remove($_GET['id']);
+			$crops = Crop::all();
+			require_once '../views/crops/admin.php';
 		}
 	}

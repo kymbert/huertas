@@ -5,6 +5,7 @@
 		}
 	
 		public function admin() {
+// 			$crops = Crop::all();
 			require_once 'views/pages/admin.php';
 		}
 		
