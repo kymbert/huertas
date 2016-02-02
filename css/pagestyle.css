@@ -1,6 +1,16 @@
+/* ------ FONTS ------ */
+@font-face {
+	font-family: source-sans;
+	src: url(../fonts/SourceSansPro-Light.otf);
+}
+@font-face {
+	font-family: source-sans-bold;
+	src: url(../fonts/SourceSansPro-Bold.otf);
+}
+
 /* ------ GLOBAL ----- */
 body {
-	font-family: Avenir, Helvetica, sans-serif;
+	font-family: source-sans, Helvetica, sans-serif;
 }
 
 div#content {
@@ -38,7 +48,7 @@ footer {
 
 /* ------ CROPS ------ */
 span.crop-common-name {
-	font-weight: bold;
+	font-family: source-sans-bold;
 }
 
 span.crop-scientific-name {
@@ -53,7 +63,7 @@ div.crop {
 	margin: 1em;
 }
 
-a.details-link {
+a.delete-link {
 	color: #b13;
 	text-decoration: none;
 	padding: 0.125em;
@@ -65,7 +75,8 @@ a.details-link {
 a.admin-btn {
 	color: #13b;
 	text-decoration: none;
-	padding: 1em;
+	margin: 0.5em;
+	padding: 0.5em;
 	border: solid 1px;
 	border-radius: 10px;
 }
@@ -100,6 +111,10 @@ a.admin-btn {
 	
 	form#add-crop textarea {
 		width: 600px;
+	}
+	
+	#new-crop-submit {
+		font-size: 100%;
 	}
 
 }
