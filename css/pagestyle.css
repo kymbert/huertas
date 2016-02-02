@@ -89,5 +89,17 @@ a.admin-btn {
 		clear: both;
 		margin: 0.5em;
 	}
+	
+	form#add-crop input {
+		height: 56px;
+	}
+	
+	form#add-crop select {
+		height: 56px;
+	}
+	
+	form#add-crop textarea {
+		width: 600px;
+	}
 
 }
