@@ -82,7 +82,17 @@ a.admin-btn {
 }
 
 /* ------- NEW CROP FORM -- */
-#new-crop-submit {
+form#add-crop input {
+	border: solid 1px #ccc;
+	border-radius: 15px;
+}
+
+form#add-crop textarea {
+	border: solid 1px #ccc;
+	border-radius: 15px;
+}
+
+input[type=submit]#new-crop-submit {
 	color: #13b;
 	padding: 1em;
 	border: solid 1px;
@@ -94,27 +104,49 @@ a.admin-btn {
 @media (max-device-width: 1000px) {
 	body {
 		font-size: 300%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+	header h1 {
+		margin-bottom: 0em;
+	}
+	
+	div#nav {
+		margin-top: 0.5em;
 	}
 	
 	div#nav a {
-		clear: both;
-		margin: 0.5em;
+		margin-left: 30%;
+		margin-right: 30%;
 	}
 	
 	form#add-crop input {
-		height: 56px;
+		font-size: 32px;
+		width: 600px;
+		border: solid 1px #ccc;
+		border-radius: 15px;
 	}
 	
 	form#add-crop select {
-		height: 56px;
+		width: 600px;
+		font-size: 32px;
+		margin-left: 0%;
+		margin-right: 30%;
+		background: transparent;
 	}
 	
 	form#add-crop textarea {
+		font-size: 32px;
 		width: 600px;
+		border: solid 1px #ccc;
+		border-radius: 15px;
 	}
 	
-	#new-crop-submit {
-		font-size: 100%;
+	input[type=submit]#new-crop-submit {
+		background: transparent;
+		border-color: #13b;
+		width: auto;
 	}
 
 }
