@@ -35,4 +35,11 @@
 			$crops = Crop::all();
 			require_once 'views/crops/admin.php';
 		}
+		
+		public function results() {
+			$month = $_POST['month'];
+			$harvest_time = $_POST['harvest_time'];
+			$crops = Crop::search($month, $harvest_time);
+			require_once 'views/crops/results.php';
+		}
 	}

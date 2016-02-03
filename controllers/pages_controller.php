@@ -13,6 +13,10 @@
 			require_once 'views/pages/new_crop.php';
 		}
 	
+		public function  select_crops() {
+			require_once 'views/pages/select_crops.php';
+		}
+		
 		public function error() {
 			require_once 'views/pages/error.php';
 		}

@@ -11,11 +11,19 @@
 /* ------ GLOBAL ----- */
 body {
 	font-family: source-sans, Helvetica, sans-serif;
+	background: #ccc;
 }
 
 div#content {
 	margin-left: 15%;
 	margin-right: 15%;
+	height: 95vh;
+	background: #fff;
+}
+
+div#content div {
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 /* ------ HEADER ----- */
@@ -44,6 +52,20 @@ footer {
 	font-size: 0.75em;
 	color: #666;
 	text-align: center;
+	position: absolute;
+	top: 90vh;
+	left: 18%;
+	right: 18%;
+}
+
+/* ------ HOME ------- */
+a#begin-crop-selection {
+	color: #13b;
+	text-decoration: none;
+	margin: 0.5em;
+	padding: 0.25em;
+	border: solid 1px;
+	border-radius: 10px;
 }
 
 /* ------ CROPS ------ */
@@ -147,6 +169,24 @@ input[type=submit]#new-crop-submit {
 		background: transparent;
 		border-color: #13b;
 		width: auto;
+	}
+	
+	form#select-crops select {
+		width: 600px;
+		font-size: 32px;
+		margin-left: 0%;
+		margin-right: 0%;
+		background: transparent;
+	}
+	
+	form#select-crops input[type=submit] {
+		background: transparent;
+		border-color: #13b;
+		border-radius: 15px;
+		width: auto;
+		font-size: 48px;
+		color: #13b;
+		font-family: source-sans, Helvetica, sans-serif;
 	}
 
 }
