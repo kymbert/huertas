@@ -84,4 +84,17 @@
 			}
 			return $list;
 		}
+		
+		public function update($id, $common_name, $scientific_name, $harvest_time, $months, $details) {
+			$details = str_replace("\n", "<br/>", $details);
+			$db = Db::getInstance();
+			$sql = "UPDATE crops SET common_name='" . $common_name . "', scientific_name='" . $scientific_name . "', time_to_harvest='" . $harvest_time . "', months='" . $months . "', details='" . $details . "' ";
+			$sql .= 'WHERE id=' . $id;
+			try {
+				$db->exec($sql);
+			} catch(PDOException $e) {
+				echo '<h1>Error in query:</h1>';
+				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
+			}
+		}
 	}

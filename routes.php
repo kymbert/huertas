@@ -16,7 +16,7 @@
 	}
 	
 	$controllers = array('pages' => ['home', 'new_crop', 'select_crops', 'error'],
-						 'crops' => ['index', 'admin', 'detail', 'add', 'remove', 'results']);
+						 'crops' => ['index', 'admin', 'detail', 'add', 'remove', 'edit', 'update_crop', 'results']);
 	
 	if (array_key_exists($controller, $controllers)) {
 		if (in_array($action, $controllers[$controller])) {
