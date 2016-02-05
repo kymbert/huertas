@@ -70,14 +70,14 @@ input[type=submit] {
 	font-size: 1em;
 }
 
-div#content {
-	margin-left: 15%;
-	margin-right: 15%;
-	height: 95vh;
-	background: #fff;
+div#container {
+	background-color: #fff;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 100vh;
 }
 
-div#content div {
+div#content{
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -105,14 +105,13 @@ div#nav a {
 
 /* ------ FOOTER ----- */
 footer {
-	margin-top: 2em;
+	position: absolute;
+    bottom: 5px;
+	margin-left: 30%;
+	margin-right: 30%;
 	font-size: 0.75em;
 	color: #666;
 	text-align: center;
-/* 	position: absolute;
-	top: 90vh;
-	left: 30%;
-	right: 30%; */
 }
 
 /* ------ CROPS ------ */
@@ -163,14 +162,14 @@ div.crop {
 		margin-right: 30%;
 	}
 	
-	form#add-crop input {
+	input {
 		font-size: 32px;
 		width: 600px;
 		border: solid 1px #ccc;
 		border-radius: 15px;
 	}
 	
-	form#add-crop select {
+	select {
 		width: 600px;
 		font-size: 32px;
 		margin-left: 0%;
@@ -178,7 +177,7 @@ div.crop {
 		background: transparent;
 	}
 	
-	form#add-crop textarea {
+	textarea {
 		font-size: 32px;
 		width: 600px;
 		height: 300px;
@@ -186,13 +185,13 @@ div.crop {
 		border-radius: 15px;
 	}
 	
-	input[type=submit]#new-crop-submit {
+/* 	input[type=submit]#new-crop-submit {
 		background: transparent;
 		border-color: #13b;
 		width: auto;
-	}
+	} */
 	
-	form#select-crops select {
+/* 	form#select-crops select {
 		width: 600px;
 		font-size: 32px;
 		margin-left: 0%;
@@ -208,6 +207,6 @@ div.crop {
 		font-size: 48px;
 		color: #13b;
 		font-family: source-sans, Helvetica, sans-serif;
-	}
+	} */
 
 }
