@@ -5,20 +5,11 @@
 </head>
 <body>
 	<div id='container'>
-	<header>
-		<h1>Tené tu huerta</h1>
-		<div id='nav'>
-			<a href='?controller=pages&action=home'>Comenzando</a>
-			<a href='?controller=crops&action=index'>Los Cultivos</a>
-			<a href='?controller=crops&action=admin'>Admin</a>
+		<?php require_once 'header.php' ?>
+		<div id='content'>
+			<?php require_once 'routes.php'; ?>
 		</div>
-	</header>
-	<div id='content'>
-	<?php require_once 'routes.php'; ?>
-	</div>
-	<footer>
-		Copyright © 2016 by INGES
-	</footer>
+		<?php require_once 'footer.php'; ?>
 	</div>
 </body>
 </html>
