@@ -68,4 +68,33 @@
 				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
 			}
 		}
+		
+		public function search($month, $harvest_time) {
+			$list = [];
+			$db = Db::getInstance();
+			$sql = "SELECT * FROM crops WHERE months LIKE '%" . $month . "%' AND time_to_harvest=" . $harvest_time . " ORDER BY common_name;";
+			$req = $db->query($sql);
+			foreach($req->fetchAll() as $crop) {
+				$list[] = new Crop($crop['id'],
+						$crop['common_name'],
+						$crop['scientific_name'],
+						$crop['harvest_time'],
+						$crop['months'],
+						$crop['details']);
+			}
+			return $list;
+		}
+		
+		public function update($id, $common_name, $scientific_name, $harvest_time, $months, $details) {
+			$details = str_replace("\n", "<br/>", $details);
+			$db = Db::getInstance();
+			$sql = "UPDATE crops SET common_name='" . $common_name . "', scientific_name='" . $scientific_name . "', time_to_harvest='" . $harvest_time . "', months='" . $months . "', details='" . $details . "' ";
+			$sql .= 'WHERE id=' . $id;
+			try {
+				$db->exec($sql);
+			} catch(PDOException $e) {
+				echo '<h1>Error in query:</h1>';
+				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
+			}
+		}
 	}
