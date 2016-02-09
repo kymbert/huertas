@@ -27,7 +27,8 @@
 				return call('pages', 'error');
 			}
 			Crop::remove($_GET['id']);
-			$crops = Crop::all();
+			CropDetail::remove($_GET['id']);
+			$crops = CropDetail::all();
 			require_once 'views/crops/admin.php';
 		}
 		

@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS crops, harvest_times, regions, crop_details_en, crop_details_es;
+DROP TABLE IF EXISTS crops, harvest_times, regions, crop_details;
 
 CREATE TABLE crops
 (

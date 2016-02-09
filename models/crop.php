@@ -53,7 +53,6 @@
 				echo '<h1>Error in query:</h1>';
 				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
 			}
-			CropDetail::remove($id);
 		}
 		
 		public function search($month, $harvest_time) {

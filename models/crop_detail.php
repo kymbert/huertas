@@ -71,8 +71,13 @@
 		
 		public function remove($crop_id) {
 			$db = Db::getInstance();
-			$sql = 'DELETE * FROM crop_details WHERE crop_id=' . $crop_id .';';
-			$db->exec($sql);
+			$sql = 'DELETE FROM crop_details WHERE crop_id=' . $crop_id .';';
+			try {
+				$db->exec($sql);
+			} catch(PDOException $e) {
+				echo '<h1>Error in query:</h1>';
+				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
+			}
 		}
 		
 	public function update($crop_id,
