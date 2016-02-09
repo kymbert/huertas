@@ -1,61 +1,47 @@
 <?php
 	class Crop {
 		public $id;
-		public $common_name;
-		public $scientific_name;
-		public $harvet_time;
-		public $months;
-		public $details;
+		public $region;
+		public $time_to_havest;
+		public $transplant;
 		
-		public function __construct($id, $common_name, $scientific_name, $harvest_time, $months, $details) {
+		public function __construct($id, $region, $time_to_harvest, $transplant) {
 			$this->id = $id;
-			$this->common_name = $common_name;
-			$this->scientific_name = $scientific_name;
-			$this->harvet_time = $harvest_time;
-			$this->months = $months;
-			$this->details = $details;
+			$this->region = $region;
+			$this->time_to_harvest = $time_to_harvest;
+			$this->transplant = $transplant;
 		}
 		
 		public function all() {
 			$list = [];
 			$db = Db::getInstance();
-			$req = $db->query('SELECT * FROM crops ORDER BY common_name');
+			$req = $db->query('SELECT * FROM crops');
 			foreach($req->fetchAll() as $crop) {
-				$list[] = new Crop($crop['id'],
-								   $crop['common_name'],
-								   $crop['scientific_name'],
-								   $crop['harvest_time'],
-								   $crop['months'], 
-								   $crop['details']);
-						}
+				$list[] = new Crop($crop['id'], $crop['region'], $crop['time_to_harvest'], $crop['transplant']);
+			}
 			return $list;
 		}
 		
 		public function find($id) {
 			$db = Db::getInstance();
-			$id = intval($id);
-			$req = $db->prepare('SELECT * FROM crops WHERE id = :id');
-			$req->execute(array('id' => $id));
+			$sql = 'SELECT * FROM crops WHERE id=' . $id . ';';
+			$req = $db->query($sql);
 			$crop = $req->fetch();
-			return new Crop($crop['id'],
-						    $crop['common_name'],
-						    $crop['scientific_name'],
-						    $crop['harvest_time'],
-						    $crop['months'], 
-						    $crop['details']);
+			return new Crop($crop['id'], $crop['region'], $crop['time_to_harvest'], $crop['transplant']);
 		}
 		
-		public function add($common_name, $scientific_name, $harvest_time, $months, $details) {
-			$details = str_replace("\n", "<br/>", $details);
+		public function add($region, $harvest_time, $transplant) {
 			$db = Db::getInstance();
-			$sql = 'INSERT INTO crops(id, common_name, scientific_name, time_to_harvest, months, details) ';
-			$sql .= 'VALUES (NULL, "' . $common_name . '", "' . $scientific_name . '", ' . $harvest_time . ', "' . $months . '", "' . $details . '");';
+			$sql = 'INSERT INTO crops(id, region, harvest_time, transplant) ';
+			$sql .= 'VALUES (NULL, ' . $region . ', ' . $harvest_time . ', ' . $transplant . ');';
 			try {
 				$db->exec($sql);
 			} catch(PDOException $e) {
-    			echo '<h1>Error in query:</h1>';
-				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
-    		}
+				echo $sql . '\n';
+				echo $e->getMessage();
+			}
+			$req = $db->query('SELECT MAX(id) FROM crops;');
+			return $req->fetch();
 		}
 		
 		public function remove($id) {
@@ -67,6 +53,7 @@
 				echo '<h1>Error in query:</h1>';
 				echo '<p>' . $sql . '</p><p>' . $e->getMessage() . '</p>';
 			}
+			CropDetail::remove($id);
 		}
 		
 		public function search($month, $harvest_time) {

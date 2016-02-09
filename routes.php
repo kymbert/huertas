@@ -7,8 +7,13 @@
 				$controller = new PagesController();
 				break;
 			case 'crops':
-				require_once('models/crop.php');
+				require_once 'models/crop.php';
+				require_once 'models/crop_detail.php';
 				$controller = new CropsController();
+				break;
+			case 'crop_details':
+				require_once 'models/crop_detail.php';
+				$controller = new CropDetailsController();
 				break;
 		}
 	
@@ -16,7 +21,8 @@
 	}
 	
 	$controllers = array('pages' => ['home', 'new_crop', 'select_crops', 'error'],
-						 'crops' => ['index', 'admin', 'detail', 'add', 'remove', 'edit', 'update_crop', 'results']);
+						 'crops' => ['list_all', 'admin', 'add', 'remove'],
+						 'crop_details' => ['display', 'edit', 'update']);
 	
 	if (array_key_exists($controller, $controllers)) {
 		if (in_array($action, $controllers[$controller])) {

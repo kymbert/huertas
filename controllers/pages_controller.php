@@ -10,6 +10,15 @@
 		}
 		
 		public function new_crop() {
+			$db = Db::getInstance();
+			$sql = 'SELECT id, string_es FROM harvest_times;';
+			$harvest_times = $db->query($sql);
+			$harvest_times = $harvest_times->fetchAll();
+
+			$sql = 'SELECT id, name FROM regions;';
+			$regions = $db->query($sql);
+			$regions = $regions->fetchAll();
+			
 			require_once 'views/pages/new_crop.php';
 		}
 	

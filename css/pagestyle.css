@@ -4,6 +4,10 @@
 	src: url(../fonts/SourceSansPro-Light.otf);
 }
 @font-face {
+	font-family: source-sans-reg;
+	src: url(../fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
 	font-family: source-sans-bold;
 	src: url(../fonts/SourceSansPro-Bold.otf);
 }
@@ -124,6 +128,11 @@ span.crop-common-name {
 
 span.crop-scientific-name {
 	font-style: italic;
+}
+
+span.detail-name {
+	font-family: source-sans-reg;
+	margin-left: 2em;
 }
 
 div.crop-details {
