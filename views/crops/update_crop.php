@@ -49,7 +49,7 @@
 	<p>Edad para transplante: <input type='text' name='time_to_transplant' value='<?php echo $time_to_transplant ?>' /></p>
 	<p>Tiempo para poder cosechar: <input type='text' name='time_to_harvest' value='<?php echo $time_to_harvest ?>' /></p>
 	<p>Indicador para cosechar: <input type='text' name='harvest_indicator' value='<?php echo $harvest_indicator ?>' /></p>
-	<p>Otra: <input type='text' name='other' value='<?php echo $other ?>' /></p>
+	<p>Más: <input type='text' name='other' value='<?php echo $other ?>' /></p>
 	<input type=submit value='enviar' />
 </form>
 </div>
