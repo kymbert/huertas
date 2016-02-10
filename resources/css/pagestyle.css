@@ -1,16 +1,20 @@
 /* ------ FONTS ------ */
 @font-face {
-	font-family: source-sans;
+	font-family: body;
 	src: url(../fonts/SourceSansPro-Light.otf);
 }
 @font-face {
-	font-family: source-sans-bold;
+	font-family: semi-bold;
+	src: url(../fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+	font-family: bold;
 	src: url(../fonts/SourceSansPro-Bold.otf);
 }
 
 /* ------ GLOBAL ----- */
 body {
-	font-family: source-sans, Helvetica, sans-serif;
+	font-family: body, Helvetica, sans-serif;
 	background: #ccc;
 }
 
@@ -44,7 +48,6 @@ body {
 	text-decoration: none;
 	padding: 0.15em;
 	font-size: 0.75em;
-	font-family: source-sans-bold;
 	border: solid 1px;
 }
 
@@ -56,7 +59,7 @@ textarea, input {
 
 select {
 	background: #fff;
-	font-family: source-sans, Helvetica, sans-serif;
+	font-family: body, Helvetica, sans-serif;
 }
 
 input[type=submit] {
@@ -66,20 +69,22 @@ input[type=submit] {
 	border-radius: 10px;
 	background-color: #fff;
 	z-index: 999;
-	font-family: source-sans, Helvetica, sans-serif;
+	font-family: body, Helvetica, sans-serif;
 	font-size: 1em;
 }
 
 div#container {
+	position: relative;
 	background-color: #fff;
     margin-left: 10%;
     margin-right: 10%;
-    min-height: 100vh;
+    min-height: 93vh;
 }
 
 div#content{
 	margin-left: 5%;
 	margin-right: 5%;
+	padding-bottom: 20px;
 }
 
 /* ------ HEADER ----- */
@@ -107,20 +112,33 @@ div#nav a {
 footer {
 	position: absolute;
     bottom: 5px;
-	margin-left: 30%;
-	margin-right: 30%;
+    left: 0;
+	width: 100%;
+	height: 20px;
 	font-size: 0.75em;
 	color: #666;
 	text-align: center;
 }
 
+/* ------ SELECTION --- */
+img.select-img {
+	float: right;
+	height: auto;
+	width: 40%;
+}
+
 /* ------ CROPS ------ */
 span.crop-common-name {
-	font-family: source-sans-bold;
+	font-family: bold;
 }
 
 span.crop-scientific-name {
 	font-style: italic;
+}
+
+span.detail-name {
+	font-family: semi-bold;
+	margin-left: 2em;
 }
 
 div.crop-details {
@@ -135,16 +153,15 @@ div.crop {
 @media (max-device-width: 1000px) {
 	body {
 		font-size: 300%;
-		margin-left: 5%;
-		margin-right: 5%;
+	}
+	
+	div#container {
+		margin-left: 1.5%;
+		margin-right: 1.5%;
+		min-height: 85vh;
 	}
 	
 	div#content {
-		margin-left: 1.5%;
-		margin-right: 1.5%;
-	}
-	
-	div#content div {
 		margin-left: 3%;
 		margin-right: 3%;
 	}
@@ -185,28 +202,8 @@ div.crop {
 		border-radius: 15px;
 	}
 	
-/* 	input[type=submit]#new-crop-submit {
-		background: transparent;
-		border-color: #13b;
-		width: auto;
-	} */
-	
-/* 	form#select-crops select {
-		width: 600px;
-		font-size: 32px;
-		margin-left: 0%;
-		margin-right: 0%;
-		background: transparent;
+	footer {
+		bottom: 35px;
 	}
-	
-	form#select-crops input[type=submit] {
-		background: transparent;
-		border-color: #13b;
-		border-radius: 15px;
-		width: auto;
-		font-size: 48px;
-		color: #13b;
-		font-family: source-sans, Helvetica, sans-serif;
-	} */
 
 }
