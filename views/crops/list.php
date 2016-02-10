@@ -1,7 +1,7 @@
-<?php 
+<?php
 if (empty($crop_details)) {
 	echo '<div><p>No results found for your selection.</p>';
-	echo "<p><a href='?controller=pages&action=select_crops' class='btn-blue'>Volver al Inicio</a></p></div>";
+	echo "<p><a href='?controller=select&action=region' class='btn-blue'>Volver al Inicio</a></p></div>";
 	return;
 }
 ?>

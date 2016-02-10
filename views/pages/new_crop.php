@@ -1,6 +1,6 @@
 <div>
 <form id='add-crop' action='?controller=crops&action=add' method='POST'>
-	<p>Region: <select name='region'>
+	<p>Región: <select name='region'>
 					<?php foreach($regions as $region) {
 						echo '<option value=' . $region['id'] . '>' . $region['name'] . '</option>';
 					}?>

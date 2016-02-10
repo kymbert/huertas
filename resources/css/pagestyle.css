@@ -1,20 +1,20 @@
 /* ------ FONTS ------ */
 @font-face {
-	font-family: source-sans;
+	font-family: body;
 	src: url(../fonts/SourceSansPro-Light.otf);
 }
 @font-face {
-	font-family: source-sans-reg;
+	font-family: semi-bold;
 	src: url(../fonts/SourceSansPro-Regular.otf);
 }
 @font-face {
-	font-family: source-sans-bold;
+	font-family: bold;
 	src: url(../fonts/SourceSansPro-Bold.otf);
 }
 
 /* ------ GLOBAL ----- */
 body {
-	font-family: source-sans, Helvetica, sans-serif;
+	font-family: body, Helvetica, sans-serif;
 	background: #ccc;
 }
 
@@ -59,7 +59,7 @@ textarea, input {
 
 select {
 	background: #fff;
-	font-family: source-sans, Helvetica, sans-serif;
+	font-family: body, Helvetica, sans-serif;
 }
 
 input[type=submit] {
@@ -69,7 +69,7 @@ input[type=submit] {
 	border-radius: 10px;
 	background-color: #fff;
 	z-index: 999;
-	font-family: source-sans, Helvetica, sans-serif;
+	font-family: body, Helvetica, sans-serif;
 	font-size: 1em;
 }
 
@@ -120,9 +120,16 @@ footer {
 	text-align: center;
 }
 
+/* ------ SELECTION --- */
+img.select-img {
+	float: right;
+	height: auto;
+	width: 40%;
+}
+
 /* ------ CROPS ------ */
 span.crop-common-name {
-	font-family: source-sans-bold;
+	font-family: bold;
 }
 
 span.crop-scientific-name {
@@ -130,7 +137,7 @@ span.crop-scientific-name {
 }
 
 span.detail-name {
-	font-family: source-sans-reg;
+	font-family: semi-bold;
 	margin-left: 2em;
 }
 

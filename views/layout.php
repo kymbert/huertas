@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel='stylesheet' href='css/pagestyle.css' />
+	<link rel='stylesheet' href='resources/css/pagestyle.css' />
 </head>
 <body>
 	<div id='container'>
