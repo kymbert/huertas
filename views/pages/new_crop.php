@@ -10,7 +10,9 @@
 						echo '<option value=' . $time['id'] . '>' . $time['string_es'] . '</option>';
 					}?>
 			</select></p>
-	<p>¿Para preparar almacigos y trasplantar?<input type='checkbox' value='true' name='transplant' />
+	<p>¿Para preparar almacigos y trasplantar?</p>
+	<p><input type='checkbox' value='true' name='transplant' class='radio' id='transplant' />
+		<label for='transplant'>Si</label></p>
 	<p><input type='submit' value='siguiente' id='new-crop-submit' class='btn-blue' /></p>
 </form>
 </div>

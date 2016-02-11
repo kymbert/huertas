@@ -186,6 +186,22 @@ div.crop {
 		border-radius: 15px;
 	}
 	
+	input[type=checkbox] {
+		display: none;
+	}
+	
+	input[type=checkbox] + label::before {
+	    content: '';
+	    display: inline-block;
+	    border: 1px solid #13b;
+	    border-radius: 50%;
+	    margin: 0 0.5em -0.125em;
+	}
+	
+	input[type=checkbox]:checked + label::before {
+	    background-color: #79f;
+	}	
+	
 	input[type=radio] {
 		display: none;
 	}
@@ -212,8 +228,8 @@ div.crop {
 	}
 	
 	select {
-		width: 600px;
-		font-size: 48px;
+		width: 100%;
+		font-size: 1.5em;
 		margin-left: 0%;
 		margin-right: 30%;
 		margin-bottom: 2em;
