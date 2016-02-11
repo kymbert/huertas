@@ -186,20 +186,38 @@ div.crop {
 		border-radius: 15px;
 	}
 	
-	select {
-		width: 600px;
-		font-size: 32px;
-		margin-left: 0%;
-		margin-right: 30%;
+	input[type=radio] {
+		display: none;
+	}
+	
+	input[type=radio] + label::before {
+	    content: '';
+	    display: inline-block;
+	    border: 1px solid #13b;
+	    border-radius: 50%;
+	    margin: 0 0.5em -0.125em;
+	}
+	
+	input[type=radio]:checked + label::before {
+	    background-color: #79f;
+	}
+	
+	.radio + label::before {
+	    width: 1em;
+	    height: 1em;
+	}
+	
+	input[type=submit] {
 		background: transparent;
 	}
 	
-	textarea {
-		font-size: 32px;
+	select {
 		width: 600px;
-		height: 300px;
-		border: solid 1px #ccc;
-		border-radius: 15px;
+		font-size: 48px;
+		margin-left: 0%;
+		margin-right: 30%;
+		margin-bottom: 2em;
+		background: transparent;
 	}
 	
 	footer {

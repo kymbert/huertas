@@ -41,8 +41,8 @@ CREATE TABLE crop_details
 	other VARCHAR(155)
 );
 
-INSERT INTO huertas.harvest_times (id, string_en, string_es) VALUES (1, 'Less than 90 days.', 'Menos de 90 dias.');
-INSERT INTO huertas.harvest_times (id, string_en, string_es) VALUES (2, '90 to 150 days.', '90 a 150 dias.');
-INSERT INTO huertas.harvest_times (id, string_en, string_es) VALUES (3, 'More tan 150 days.', 'Mas de 150 dias.');
+INSERT INTO harvest_times (id, string_en, string_es) VALUES (1, 'Less than 90 days.', 'Menos de 90 dias.');
+INSERT INTO harvest_times (id, string_en, string_es) VALUES (2, '90 to 150 days.', '90 a 150 dias.');
+INSERT INTO harvest_times (id, string_en, string_es) VALUES (3, 'More tan 150 days.', 'Mas de 150 dias.');
 
-INSERT INTO huertas.regions (id, name) VALUES (NULL, 'Nicaragua RAAN');
+INSERT INTO regions (id, name) VALUES (NULL, 'Nicaragua RAAN');
