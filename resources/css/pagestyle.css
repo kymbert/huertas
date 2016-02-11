@@ -170,13 +170,11 @@ div.crop {
 		margin-bottom: 0em;
 	}
 	
-	div#nav {
-		margin-top: 0.5em;
-	}
-	
 	div#nav a {
+		display: block;
 		margin-left: 30%;
 		margin-right: 30%;
+		margin-bottom: 3%;
 	}
 	
 	input {
