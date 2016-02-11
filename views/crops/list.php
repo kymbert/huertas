@@ -1,6 +1,6 @@
 <?php
 if (empty($crop_details)) {
-	echo '<div><p>No results found for your selection.</p>';
+	echo '<div><p>No hay cultivos para tu selección.</p>';
 	echo "<p><a href='?controller=select&action=region' class='btn-blue'>Volver al Inicio</a></p></div>";
 	return;
 }

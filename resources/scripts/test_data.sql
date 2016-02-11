@@ -1,6 +1,6 @@
-INSERT INTO huertas.crops (id, region, harvest_time, transplant) VALUES (NULL, 1, 1, TRUE);
-SET @my_id = (SELECT MAX(id) FROM huertas.crops);
-INSERT INTO huertas.crop_details
+INSERT INTO crops (id, region, harvest_time, transplant) VALUES (NULL, 1, 1, TRUE);
+SET @my_id = (SELECT MAX(id) FROM crops);
+INSERT INTO crop_details
 (
 	id,
 	crop_id,
@@ -39,9 +39,9 @@ VALUES
 	'28 a 33 plantas u hojas en surco de 10m (por cosecha)'
 );
 
-INSERT INTO huertas.crops (id, region, harvest_time) VALUES (NULL, 1, 2);
-SET @my_id = (SELECT MAX(id) FROM huertas.crops);
-INSERT INTO huertas.crop_details
+INSERT INTO crops (id, region, harvest_time) VALUES (NULL, 1, 2);
+SET @my_id = (SELECT MAX(id) FROM crops);
+INSERT INTO crop_details
 (
 	id,
 	crop_id,
